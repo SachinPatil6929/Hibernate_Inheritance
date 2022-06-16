@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+	
+	<property name="connection.url">jdbc:mysql://localhost:3306/hibernatedb</property>
+	<property name="connection.username">root</property>
+	<property name="connection.password">Sachin@7488</property>
+	<property name="connection.diver_class">com.mysql.jdbc.Driver</property>
+	<property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+	<property name="show_sql">true</property>
+	<property name="formate_sql">true</property>
+	<property name="hbm2ddl.auto">create</property>
+	<property name="connection.pool_size">5</property>
+	<property name="current_session_context_class">thread</property>
+	<mapping class="hibernate_inheritance_single_table.Employee"/>
+	<mapping class="hibernate_inheritance_single_table.RegularEmployee"/>
+	<mapping class="hibernate_inheritance_single_table.ContractEmployee"/>
+	<mapping class="hibernate_inheritance_table_per_class.Emp"/>
+	<mapping class="hibernate_inheritance_table_per_class.C_Emp"/>
+	<mapping class="hibernate_inheritance_table_per_class.P_Emp"/>
+	<mapping class="hibernate_inheritance_joined.EmpJoin"/>
+	<mapping class="hibernate_inheritance_joined.C_EmpJoin"/>
+	<mapping class="hibernate_inheritance_joined.P_EmpJoin"/>
+	
+	</session-factory>
+</hibernate-configuration>
